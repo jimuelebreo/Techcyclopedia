@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techcyclopedia - New Component</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#211A1A', /* Main background dark tone */
+                        'card-bg': '#473B3B', /* Inner card background - distinct reddish-brown */
+                        'accent-purple': '#A084E8', /* The visible purple accent/glow color */
+                        'header-dark': '#1E1717', /* Header and button dark color */
+                        'logo-gold': '#FDD835', /* Custom color for the prominent gold logo text */
+                    },
+                    boxShadow: {
+                        /* Simulates the purple border/shadow glow around the main card */
+                        'glow': '0 0 15px rgba(160, 132, 232, 0.7), 0 0 5px rgba(160, 132, 232, 0.5)',
+                        'button-glow': '0 4px 0 rgba(0,0,0,0.5), 0 0 8px #000',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Use Inter font family -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin_upload.css">
+</head>
+<body class="text-white">
+
+    <!-- Header Bar -->
+    <header class="bg-header-dark shadow-xl text-white py-3 px-6 flex justify-between items-center border-b border-accent-purple/50">
+        <!-- Using the custom 'logo-gold' color for the H1 text -->
+        <a class="text-2xl font-extrabold tracking-widest text-logo-gold drop-shadow-lg" style="text-shadow: 1px 1px 0 #000;" href="index.html">TECHCYCLOPEDIA</a>
+        <div class="flex items-center space-x-6">
+            <a href="forum.html" class="text-sm font-semibold hover:text-accent-purple transition duration-200">Forum</a>
+            <!-- User Icon Placeholder -->
+            <a class="w-8 h-8 rounded-full bg-accent-purple flex items-center justify-center border border-white cursor-pointer" href="UserDashboard.html">
+                <svg class="w-5 h-5 text-header-dark" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        <!-- Form Container / Card: Applies the dark background, rounded corners, and the purple glow effect -->
+        <div class="w-full max-w-2xl bg-card-bg rounded-lg p-8 md:p-10 shadow-glow border-2 border-accent-purple/50">
+            
+            <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-8 text-white tracking-wider uppercase" style="text-shadow: 2px 2px 0 #000;">New Components</h2>
+
+            <div id="message" class="hidden p-3 mb-4 rounded-md text-sm font-bold"></div>
+            <form action="#" method="POST" class="space-y-6" id="uploadForm">
+
+            <form action="#" method="POST" class="space-y-6" id="uploadForm">
+                
+                <!-- Component Name -->
+                <div>
+                    <label for="component-name" class="block text-sm font-bold mb-2">Component Name</label>
+                    <input type="text" id="component-name" name="component-name" 
+                           class="form-input w-full"
+                           placeholder="Enter component name" required>
+                </div>
+
+                <!-- Component Image (File Upload) -->
+                <div>
+                    <label for="component-image" class="block text-sm font-bold mb-2">Component Image</label>
+                    <input type="file" id="component-image" name="component-image" 
+                           class="custom-file-input block w-full text-sm text-white-500" required>
+                </div>
+
+                <!-- Category Dropdown -->
+                <div>
+                    <label for="category" class="block text-sm font-bold mb-2">Category</label>
+                    <div class="relative">
+                        <select id="category" name="category" 
+                                class="form-input w-full appearance-none pr-8 cursor-pointer" required>
+                            <option value="" disabled selected>select Category ^</option>
+                            <option value="Power">Power</option>
+                            <option value="Communication/Connection">Communication/Connection</option>
+                            <option value="Controller/Processing">Controller/Processing</option>
+                            <option value="Input">Input</option>
+                            <option value="Output">Output</option>
+                            <option value="Basic Electronic">Basic Electronics</option>
+                        </select>
+                        <!-- Custom Arrow to match the original image's look -->
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-white">
+                            <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description Textarea -->
+                <div class="pt-4">
+                    <label for="description" class="sr-only">Description</label>
+                    <textarea id="description" name="description" rows="8" 
+                              class="form-input w-full min-h-[200px] resize-none"
+                              placeholder="Write Description...."></textarea>
+                </div>
+
+                <!-- Upload Button -->
+                <div class="flex justify-end pt-4">
+                    <button type="submit" 
+                            class="px-8 py-3 bg-header-dark text-white font-bold rounded-lg uppercase tracking-wider 
+                                   hover:bg-primary-dark transition duration-200 
+                                   ">
+                        Upload
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="admin_upload.js"></script>
+    
+</body>
+</html>

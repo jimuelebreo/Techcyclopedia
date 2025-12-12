@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECHCYCLOPEDIA Forum</title>
+
+    <!-- Load Inter font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for generic icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="forum.css" />
+  </head>
+  <body>
+    <!-- Custom Message Box for simulating alerts -->
+    <div id="message-box">
+      <p id="message-content"></p>
+      <button onclick="closeMessageBox()">OK</button>
+    </div>
+
+    <div class="container">
+      <!-- HEADER/NAV SECTION -->
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">TECHCYCLOPEDIA</a>
+        </div>
+        <!-- START: User icon is now wrapped in an anchor tag -->
+        <a href="UserDashboard.html" title="Go to User Dashboard">
+          <i class="fas fa-user-circle profile-icon"></i>
+        </a>
+        <!-- END: User icon is now wrapped in an anchor tag -->
+      </header>
+
+      <!-- MAIN TITLE -->
+      <h1 class="page-title">Forum</h1>
+
+      <!-- NEW POST CREATION CARD -->
+      <div class="post-card">
+        <form id="new-post-form">
+          <label for="post-title">Title</label>
+          <input
+            type="text"
+            id="post-title"
+            name="post-title"
+            placeholder="A descriptive title for your thread..."
+            required
+          />
+
+          <label for="post-body">Write a post....</label>
+          <textarea
+            id="post-body"
+            name="post-body"
+            placeholder="Share your knowledge, ask a question, or start a discussion..."
+            required
+          ></textarea>
+
+          <button type="submit" class="post-button">Post</button>
+        </form>
+      </div>
+
+      <!-- RECENT POSTS SECTION -->
+      <h2 class="section-title">Recent Posts</h2>
+
+      <div class="recent-posts-list" id="threads-container">
+        <p style="color: #d1c5bb">Loading forum threads...</p>
+      </div>
+    </div>
+
+    <script src="forum.js"></script>
+  </body>
+</html>

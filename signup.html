@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body class="p-4">
+
+    <!-- Header Section -->
+    <header class="text-center w-full max-w-lg mb-10">
+        <h1 class="header-text-stroke uppercase tracking-widest">Techcyclopedia</h1>
+    </header>
+
+    <!-- Main Content Card / Form -->
+    <!-- Removed mt-20 margin to allow flexbox (body) to center the content vertically -->
+    <div class="w-full max-w-sm sm:max-w-md mx-auto p-8">
+        
+        
+
+        <!-- The Form -->
+        <form action="register.php" method="POST" class="space-y-6">
+            
+            <!-- Username Field -->
+            <div>
+                <input 
+                    type="text" 
+                    placeholder="UserName"
+                    name="username"
+                    required
+                    class="form-input w-full rounded-lg"
+                >
+            </div>
+
+            <!-- Password Field -->
+            <div>
+                <input 
+                    type="password" 
+                    placeholder="Password"
+                    name="password"
+                    required
+                    class="form-input w-full rounded-lg"
+                >
+            </div>
+
+            <!-- Confirm Password Field (The one with the highlighted purple outline in the image) -->
+            <div>
+                <input 
+                    type="password" 
+                    placeholder="Confirm Password"
+                    name="confirm_password"
+                    required
+                    class="form-input w-full rounded-lg"
+                >
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-4 text-center">
+                <button
+                    type="submit"
+                    class="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-200 transform hover:scale-105"
+                >
+                    Sign Up
+                    
+                </button>
+              <a href="index.html"  type="submit"
+                    class="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-8 rounded-full shadow-lg transition duration-200 transform hover:scale-105">
+                back</a>
+            </div>
+            
+            <div class="text-center pt-4">
+                <p class="text-black text-opacity-80">
+                    Already have an account? 
+                    <a href="Login.html" class="text-black font-bold hover:text-gray-300 transition duration-150">
+                        Log In
+                    </a>
+                </p>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>

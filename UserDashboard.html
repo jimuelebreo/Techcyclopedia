@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECHCYCLOPEDIA User Dashboard</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="UserDashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">TECHCYCLOPEDIA</a>
+        </div>
+        <i class="fas fa-user-circle profile-icon" title="Your Dashboard"></i>
+      </header>
+
+      <h1 class="page-title">User Dashboard</h1>
+
+      <main class="dashboard-grid">
+        <section class="profile-card">
+          <i class="fas fa-user-circle large-profile-icon"></i>
+          <h2 class="username" id="dashboard-username">Loading...</h2>
+          <p class="user-status" id="dashboard-member-since">Loading...</p>
+          <button class="edit-button">Edit Profile</button>
+        </section>
+
+        <section class="activity-section">
+          <h3 class="section-heading">Your Recent Activity</h3>
+          <div class="activity-list" id="main-activity-list"> <div class="activity-item">
+              <span class="activity-type">Total Threads:</span>
+              <span id="dashboard-thread-count">Loading...</span>
+            </div>
+            <div class="activity-item">
+              <span class="activity-type">Settings:</span>
+              <a href="#">Privacy and Security</a>
+            </div>
+          </div>
+
+          <section class="bookmarked-section">
+            <h3 class="section-heading mt-4">Your Bookmarked Components</h3>
+            <div class="activity-list" id="bookmarked-components-list">
+                <div style="padding: 10px; color:#d1c5bb;">Loading bookmarks...</div>
+            </div>
+          </section>
+          <section class="activity-section">
+          <h3 class="section-heading mt-4">Account</h3>
+          
+          <a id="adminUploadButton" href="admin_upload.html" 
+             class="logout-button" style="display: none; background-color: #A084E8; color: #1f140c;">
+             Upload New Component
+          </a>
+          
+          <button id="logoutButton" class="logout-button">Log Out</button> 
+          <button id="loginButton" class="logout-button" style="display: none;">Log In</button>
+        </section>
+      </main>
+    </div>
+
+    <script src="UserDashboard.js"></script>
+  </body>
+</html>

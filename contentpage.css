@@ -1,0 +1,193 @@
+/* BASE STYLES & TYPOGRAPHY */
+body {
+  /* Sepia gradient background - Matching the previous file's dark theme */
+  background: linear-gradient(to bottom, #1f140c 0%, #30241b 40%, #52473d 100%);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px; /* Slightly wider container for the grid */
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* HEADER/NAVIGATION - Reused from forum.html */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #52473d;
+  margin-bottom: 2rem;
+}
+
+.logo a {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* New CSS for grouped navigation links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Spacing between Forum link and Profile Icon */
+}
+
+.forum-link {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #d1c5bb;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.forum-link:hover {
+  color: #ffffff;
+}
+/* End New CSS */
+
+.profile-icon {
+  font-size: 1.8rem;
+  color: #d1c5bb;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.profile-icon:hover {
+  color: #ffffff;
+}
+
+/* MAIN TITLE */
+.page-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Matching the bold look from the image */
+}
+
+/* COMPONENT GRID LAYOUT */
+.component-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+}
+
+/* COMPONENT CARD STYLING */
+.component-card {
+  background-color: #f7f7f7; /* White background for component cards, as seen in image */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 2px solid #52473d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #30241b; /* Dark text on light background */
+}
+
+.component-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ... (Existing styles up to .image-placeholder) ... */
+
+.component-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.image-placeholder {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  background-color: #e0e0e0;
+  border: 1px solid #999;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 2rem;
+  color: #7d6b5c;
+  /* CRITICAL ADDITION: This clips the image to the 80x80 container */
+  overflow: hidden; 
+}
+
+/* NEW STYLE: To make the image fit perfectly inside the placeholder */
+.component-image {
+  width: 100%; /* Make the image take 100% of the placeholder width */
+  height: 100%; /* Make the image take 100% of the placeholder height */
+  
+  /* CRITICAL ADDITION: This ensures the image covers the area, 
+     maintaining its aspect ratio and cropping if necessary. */
+  object-fit: cover; 
+  
+  /* Inherit the border-radius from the container for rounded corners */
+  border-radius: 0.5rem;
+}
+
+
+.component-info {
+  flex-grow: 1;
+}
+
+.component-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.component-brief {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+/* Custom Modal/Alert for forbidden functions */
+#message-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1f140c;
+  color: #d1c5bb;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: none;
+  text-align: center;
+  border: 1px solid #7d6b5c;
+}
+
+#message-box button {
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: #7d6b5c;
+  color: #1f140c;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

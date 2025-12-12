@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Component - Component Details</title> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="component.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header class="header">
+            <a href="index.html" class="logo">TECHCYCLOPEDIA</a>
+            <div>
+                <a href="forum.html" style="color: #d1c5bb; font-size: 1rem; text-transform: uppercase; font-weight: 500; text-decoration: none; margin-right: 1rem;">Forum</a>
+                <a class="fas fa-user-circle user-icon" href="UserDashboard.html" ></a>
+            </div>
+        </header>
+        
+        <a href="index.html" class="back-link"><i class="fas fa-chevron-left"></i> Back to Components</a>
+
+        <div class="component-info">
+
+            <i class="far fa-bookmark bookmark-icon" id="bookmark-icon" title="Save this component"></i>
+
+            <div class="visual">
+                <img id="component-image" class="component-image" alt="Image preview of the component" 
+                style="max-width: 100%; height: auto; margin: 1.5rem 0; border-radius: 0.5rem; display: none;"> 
+            </div>
+            <div class="details-wrapper">
+                
+                <div class="component-header-group">
+                    <h1 id="component-name">Loading...</h1>
+                </div>
+                
+                <div id="component-category">Category: N/A</div>
+                <div class="metadata">
+                    Uploaded: <span id="component-date">N/A</span>
+                </div>
+                
+                <div class="description-section">
+                    <h2>Description</h2>
+                    <p id="component-description-text">Loading component description...</p>
+                    <a href="#" id="component-image-link" class="download-link" target="_blank">
+                        <i class="fas fa-file-download"></i> View/Download File (N/A)
+                    </a>
+                </div>
+
+            </div>
+            </div>
+        
+        <div class="interaction-section"> 
+            <h2 class="section-title">Leave a Rating & Comment</h2>
+            <div class="rating-comment-box">
+                <div class="rating-stars" id="rating-stars-container">
+                    <i class="far fa-star star" data-rating="1" title="1 Star"></i>
+                    <i class="far fa-star star" data-rating="2" title="2 Stars"></i>
+                    <i class="far fa-star star" data-rating="3" title="3 Stars"></i>
+                    <i class="far fa-star star" data-rating="4" title="4 Stars"></i>
+                    <i class="far fa-star star" data-rating="5" title="5 Stars"></i>
+                </div>
+                
+                <textarea id="comment-input" class="comment-textarea" placeholder="Share your experience or documentation feedback here..."></textarea>
+                
+                <div style="display: flex; align-items: center;">
+                    <button class="post-button" id="post-comment-btn" disabled>
+                        Post Comment
+                    </button>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Recent Community Posts</h2>
+            <div class="recent-posts" id="recent-posts">
+                <p style="color: #d1c5bb;">Loading comments...</p> 
+            </div>
+        </div>
+
+    </div>
+
+    <script src="component.js"></script>
+</body>
+</html>

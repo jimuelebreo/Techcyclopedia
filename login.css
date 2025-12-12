@@ -1,0 +1,47 @@
+/* Custom styles to match the aesthetic of the provided image */
+
+/* Apply a dark-to-light brown vertical gradient background */
+body {
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(180deg, #4e342e 0%, #d7ccc8 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack header and form vertically */
+  justify-content: center; /* CENTER CONTENT VERTICALLY */
+  align-items: center; /* CENTER CONTENT HORIZONTALLY */
+  /* padding-top: 5vh; has been removed to allow vertical centering */
+}
+
+/* Custom text stroke/shadow to mimic the TECHCYCLOPEDIA header style */
+.header-text-stroke {
+  font-size: 2.5rem; /* Larger size for desktop */
+  font-weight: 900;
+  color: white;
+  text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333,
+    1px 1px 0 #333, 0 0 5px rgba(0, 0, 0, 0.5); /* Subtle drop shadow for depth */
+}
+
+/* Style for the large input fields */
+.form-input {
+  padding: 1rem 1.5rem;
+  font-size: 1.125rem;
+  color: #333;
+  border: 1px solid #ddd;
+  /* Box shadow to give the lifted effect */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.06);
+  /* Focus style to match the purple glow on the 'Confirm Password' field */
+  transition: all 0.2s;
+}
+.form-input:focus {
+  outline: 2px solid #8b5cf6; /* Purple focus ring */
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.5);
+  border-color: #8b5cf6;
+}
+
+/* Responsive font size for mobile */
+@media (max-width: 640px) {
+  .header-text-stroke {
+    font-size: 1.75rem;
+  }
+}

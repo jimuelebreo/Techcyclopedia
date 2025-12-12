@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thread - TECHCYCLOPEDIA Forum</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="forum.css" /> 
+    </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <a href="index.html">TECHCYCLOPEDIA</a>
+        </div>
+        <a href="UserDashboard.html" title="Go to User Dashboard">
+          <i class="fas fa-user-circle profile-icon"></i>
+        </a>
+      </header>
+
+      <h1 class="page-title" id="thread-title"></h1>
+
+      <div class="post-card thread-main-post">
+        <p class="post-meta" id="post-meta"></p>
+        <div class="post-body-content" id="post-body"></div>
+      </div>
+      
+      <div class="post-card" id="comment-edit-container" style="display:none; margin-bottom: 20px;">
+        <h2 class="section-title">Edit Reply</h2>
+        <form id="comment-edit-form">
+          <input type="hidden" id="editing-comment-id" name="editing-comment-id" value="">
+          
+          <label for="comment-edit-content">Comment Content</label>
+          <textarea
+            id="comment-edit-content"
+            name="comment-edit-content"
+            placeholder="Edit your response here..."
+            required
+            minlength="5"
+          ></textarea>
+          <div style="display: flex; gap: 10px; margin-top: 10px;">
+              <button type="submit" class="post-button">Save Changes</button>
+              <button type="button" class="action-button delete-button" onclick="cancelCommentEdit()">Cancel</button>
+          </div>
+        </form>
+      </div>
+
+      <h2 class="section-title">Post a Reply</h2>
+      <div class="post-card">
+        <form id="reply-form">
+          <label for="reply-content">Your Reply</label>
+          <textarea
+            id="reply-content"
+            name="reply-content"
+            placeholder="Type your response here..."
+            required
+            minlength="5"
+          ></textarea>
+          <button type="submit" class="post-button">Post Reply</button>
+        </form>
+      </div> 
+
+      <h2 class="section-title">Replies</h2>
+
+      <div class="recent-posts-list" id="comments-container">
+        <p class="loading-message" style="color: #d1c5bb;">Loading replies...</p> 
+      </div>
+
+    </div> 
+    
+    <div id="message-box" class="message-box" style="display:none;">
+        <div class="message-content">
+            <p id="message-content"></p>
+            <button onclick="closeMessageBox()" class="message-button">OK</button>
+        </div>
+    </div>
+    
+    <script src="thread.js"></script> 
+  </body>
+</html>

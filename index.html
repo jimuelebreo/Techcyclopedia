@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TECHCYCLOPEDIA - Your Free Tech Info</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="top-right-icons">
+          <a href="forum.html"
+            ><span
+              style="
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: 500;
+              "
+              >Forum</span
+            ></a
+          >
+          <a class="fas fa-user-circle" href="UserDashboard.html"></a>
+        </div>
+
+        <h1>TECHCYCLOPEDIA</h1>
+        <p>Your Free Tech Info</p>
+      </header>
+
+      <div class="diagram-container">
+        <span class="diagram-label-center">Components</span>
+
+        <div class="center-chip">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="120"
+            height="120"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#fff"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style="opacity: 0.7"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="2" />
+            <path d="M7 16v.5" />
+            <path d="M20 7h.5" />
+            <path d="M20 17h.5" />
+            <path d="M20 12h.5" />
+            <path d="M4 7h-.5" />
+            <path d="M4 17h-.5" />
+            <path d="M4 12h-.5" />
+            <path d="M7 4v-.5" />
+            <path d="M17 4v-.5" />
+            <path d="M17 20v.5" />
+            <path d="M12 20v.5" />
+            <path d="M12 4v-.5" />
+            <path d="M7 20v.5" />
+            <path
+              d="M18 18h-4c-1.1 0-2-.9-2-2v-4c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v4c0 1.1-.9 2-2 2z"
+            />
+            <path d="M12 12h1" />
+            <path d="M10 16h1" />
+            <path d="M9 10h1" />
+          </svg>
+        </div>
+        <div class="diagram-container">
+          <span class="diagram-label-center">Components</span>
+
+          <button
+            class="diagram-item p-power"
+            onclick="handleIconClick('Power')"
+          >
+            <i class="fas fa-plug diagram-icon"></i>
+            <span class="diagram-label">Power</span>
+          </button>
+
+          <button
+            class="diagram-item p-comm"
+            onclick="handleIconClick('Communication/Connection')"
+          >
+            <i class="fas fa-wifi diagram-icon"></i>
+            <span class="diagram-label">Communication/Connection</span>
+          </button>
+          <button
+            class="diagram-item p-basic"
+            onclick="handleIconClick('Basic Electronic')"
+          >
+            <i
+              class="fas fa-microchip diagram-icon"
+              style="transform: rotate(90deg); opacity: 0.9"
+            ></i>
+            <span class="diagram-label">Basic Electronics</span>
+          </button>
+          <button
+            class="diagram-item p-output"
+            onclick="handleIconClick('Output')"
+          >
+            <i class="fas fa-desktop diagram-icon"></i>
+            <span class="diagram-label">Output</span>
+          </button>
+          <button
+            class="diagram-item p-ctrl"
+            onclick="handleIconClick('Controller/Processing')"
+          >
+            <i class="fas fa-microchip diagram-icon"></i>
+            <span class="diagram-label">Controller/Processing</span>
+          </button>
+          <button
+            class="diagram-item p-input"
+            onclick="handleIconClick('Input')"
+          >
+            <i class="fas fa-hand-paper diagram-icon"></i>
+            <span class="diagram-label">Input</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="search-auth-section">
+        <div class="search-bar-wrapper">
+          <input
+            id="search-input"
+            type="text"
+            placeholder=""
+            class="search-input"
+          />
+          <button class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="search-button" style="right: 2.5rem; width: 1.5rem">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+
+        <div
+          class="search-results-container"
+          id="search-results-container"
+        ></div>
+
+        <div class="auth-links">
+          <a href="signup.html">Sign up</a>
+          <span>|</span>
+          <a href="login.html">Log in</a>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="text-align: center">ABOUT</h2>
+
+      <div class="about-developers-section">
+        <div class="about-us">
+          <h3 class="section-title">What is Techcyclopedia ?</h3>
+          <p class="about-text">
+            Techcyclopedia is a digital reference platform dedicated to Internet
+            of Things (IoT) components, sensors, and Arduino-based controllers.
+            It provides clear, beginner-friendly information about hardware
+            functions, pin configurations, and real-world applications to help
+            students, hobbyists, and developers build smart systems with
+            confidence.
+          </p>
+        </div>
+
+        <div class="developers">
+          <h3 class="section-title">&lt;Developers/></h3>
+          <ul class="developer-list">
+            <li class="developer-item">
+              <i class="fas fa-user-circle developer-icon"></i>
+              <div class="developer-info">
+                <p class="developer-name">John Rexel Laaban</p>
+                <p class="developer-role">FrontEnd Developer</p>
+              </div>
+            </li>
+
+            <li class="developer-item">
+              <i class="fas fa-user-circle developer-icon"></i>
+              <div class="developer-info">
+                <p class="developer-name">Jimuel Ebreo</p>
+                <p class="developer-role">BackEnd Developer</p>
+              </div>
+            </li>
+
+            <li class="developer-item">
+              <i class="fas fa-user-circle developer-icon"></i>
+              <div class="developer-info">
+                <p class="developer-name">Kurt Dimacsilangan</p>
+                <p class="developer-role">Quality Assurance/Designer</p>
+              </div>
+            </li>
+
+            <h3 class="section-title">&lt;Designer/></h3>
+            <li class="developer-item">
+              <i class="fas fa-user-circle developer-icon"></i>
+              <div class="developer-info">
+                <p class="developer-name">Ma.Fe Tenorio</p>
+                <p class="developer-role">Designer</p>
+              </div>
+            </li>
+
+            <li class="developer-item">
+              <i class="fas fa-user-circle developer-icon"></i>
+              <div class="developer-info">
+                <p class="developer-name">Kaye-c Claveria</p>
+                <p class="developer-role">Designer</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="footer">
+        &copy; 2025 TECHCYCLOPEDIA. All rights reserved.
+      </footer>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

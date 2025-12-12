@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="p-4">
+
+    <header class="text-center w-full max-w-lg mb-10">
+        <h1 class="header-text-stroke uppercase tracking-widest">Techcyclopedia</h1>
+    </header>
+
+    <div class="w-full max-w-sm sm:max-w-md mx-auto p-8">
+        
+        <form id="login-form" class="space-y-6"> 
+            
+            <div>
+                <input 
+                    type="text" 
+                    name="username"
+                    placeholder="UserName"
+                    required
+                    class="form-input w-full rounded-lg"
+                >
+            </div>
+
+            <div>
+                <input 
+                    type="password"
+                    name="password" 
+                    placeholder="Password"
+                    required
+                    class="form-input w-full rounded-lg"
+                >
+            </div>
+
+
+            <div class="pt-4 text-center">
+                <button
+                    type="submit"
+                    id="login-button" class="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-200 transform hover:scale-105"
+                >
+                    Login
+                </button>
+              <a href="index.html"  type="submit"
+                    class="bg-gray-800 hover:bg-gray-900 text-white font-semibold py-4 px-8 rounded-full shadow-lg transition duration-200 transform hover:scale-105">
+                back</a>
+            </div>
+            <div class="text-center pt-4">
+                <p class="text-black text-opacity-80">
+                    Dont Have Account yet? 
+                    <a href="Signup.html" class="text-black font-bold hover:text-gray-300 transition duration-150">
+                        Sign up
+                    </a>
+                </p>
+            </div>
+        </form>
+
+    </div>
+    
+    <script src="login.js"></script>
+
+</body>
+</html>

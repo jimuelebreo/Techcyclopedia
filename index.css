@@ -1,0 +1,391 @@
+/* BASE STYLES & TYPOGRAPHY */
+body {
+  /* Sepia gradient background - Adjusted to match the deep colors in the image more closely */
+  background: linear-gradient(to bottom, #1f140c 0%, #30241b 40%, #52473d 100%);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  position: relative; /* Needed for absolute positioning of top-right icons */
+}
+
+.header h1 {
+  /* Responsive Font Size for H1 */
+  font-size: clamp(2.5rem, 8vw, 3rem);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+  /* Added a darker text shadow to match the image */
+  text-shadow: 0 0 5px #000000, 0 0 10px #000000;
+}
+
+.header p {
+  font-size: 1.125rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #d1c5bb;
+  margin-bottom: 2rem;
+}
+
+/* Top Right Icons (Forum and User Profile) */
+.top-right-icons {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-right-icons a,
+.top-right-icons i {
+  color: #d1c5bb;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.top-right-icons a:hover,
+.top-right-icons i:hover {
+  color: #ffffff;
+}
+
+/* DIAGRAM STYLES - Matched the image layout exactly */
+.diagram-container {
+  width: min(350px, 90vw);
+  height: 0;
+  padding-bottom: min(350px, 90vw);
+  margin: 0 auto 3rem auto;
+  position: relative;
+}
+
+.center-chip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-chip svg {
+  width: clamp(80px, 30vw, 120px);
+  height: clamp(80px, 30vw, 120px);
+}
+
+.diagram-item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #dedede; /* Lighter color to match the image better */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border: none;
+  background: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  min-width: 70px;
+  /* Added 'Components' label above the chip for completeness */
+}
+
+.diagram-container > .diagram-label-center {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(0.75rem, 3vw, 1rem);
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.diagram-item:hover {
+  transform: scale(1.1);
+  color: #fff; /* Highlight on hover */
+}
+
+.diagram-icon {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  margin-bottom: 0.25rem;
+}
+
+.diagram-label {
+  font-size: clamp(0.65rem, 2vw, 0.75rem);
+  white-space: nowrap;
+}
+
+/* Custom positioning for diagram items (using percentage is key for responsiveness) */
+.p-power {
+  top: 5%;
+  left: 15%;
+}
+.p-comm {
+  top: 5%;
+  right: 1%;
+}
+.p-basic {
+  top: 40%;
+  left: -10%;
+}
+.p-output {
+  top: 40%;
+  right: -4%;
+}
+.p-ctrl {
+  bottom: 5%;
+  left: 5%;
+}
+.p-input {
+  bottom: 5%;
+  right: 15%;
+}
+
+/* SEARCH AND AUTH */
+.search-auth-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #52473d; /* Separator for the next section */
+  padding-bottom: 1rem;
+}
+
+.search-bar-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  /* Matched the border style in the image */
+  border: 1px solid #d1c5bb;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  color: #000000;
+  /* Changed background to white to match the image */
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  border: none; /* Border is now on the wrapper */
+  outline: none;
+  box-sizing: border-box;
+}
+
+.search-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 2.5rem;
+  color: #554433;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.search-button:hover {
+  color: #2b1f14;
+}
+
+.auth-links {
+  text-align: center;
+  font-size: 1.1rem; /* Slightly larger size to match the image */
+  font-weight: 500;
+}
+
+.auth-links a {
+  color: #d1c5bb;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* ABOUT & DEVELOPERS SECTION (Main Content Area) */
+.about-developers-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+.about-us,
+.developers {
+  width: 100%; /* Default to full width on mobile */
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #d1c5bb;
+  text-shadow: 1px 1px #000;
+}
+
+/* Specific styling for the 'Developers' title (using an inline backslash) */
+.developers .section-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #e5e5e5;
+}
+
+/* Developer List Styles */
+.developer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.developer-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.developer-icon {
+  font-size: 3rem; /* Large icon to match the image */
+  color: #7d6b5c;
+  /* Added circle border to match the look */
+  border: 2px solid #7d6b5c;
+  border-radius: 50%;
+  padding: 0.2rem;
+  background-color: #1f140c;
+}
+
+.developer-info p {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.developer-name {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.developer-role {
+  font-size: 0.85rem;
+  color: #d1c5bb;
+}
+
+/* RESPONSIVENESS (Tablet/Desktop) */
+@media (min-width: 768px) {
+  .about-us {
+    /* Takes about 60% of the space on desktop */
+    width: 60%;
+  }
+
+  .developers {
+    /* Takes the remaining space, about 35% */
+    width: 35%;
+  }
+}
+
+/* --- SEARCH RESULTS STYLES --- */
+/* Update this block in index.css */
+.search-results-container {
+    max-width: 100%; 
+    
+    /* REMOVED: margin-top: 1rem; */
+    
+    /* ADDED: Margin below the results and the border */
+    margin-bottom: 1.5rem; 
+    
+    /* REMOVED: padding-top: 0.5rem; */
+    
+    /* ADDED: Padding below the cards */
+    padding-bottom: 1rem; 
+    
+    /* THE KEY CHANGE: Add the line to the BOTTOM of the results container */
+    border-top: none; 
+    border-bottom: 1px solid #52473d; /* This moves the line below the results */
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem; 
+}
+
+/* Card Styling (as defined in the previous solution) */
+.component-card {
+    background-color: #30241b;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #7d6b5c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    /* Ensures the card doesn't stretch beyond grid boundaries */
+    min-width: 0; 
+}
+
+.component-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: #ffcc00; /* Highlight color */
+    margin-bottom: 0.5rem;
+}
+
+.card-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 0.25rem 0;
+}
+
+.card-category {
+    font-size: 0.85rem;
+    color: #d1c5bb;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-brief {
+    font-size: 0.9rem;
+    color: #e5e5e5;
+}
+
+.no-results-message {
+    font-size: 1.1rem;
+    color: #d1c5bb;
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1; /* Span all columns */
+}
